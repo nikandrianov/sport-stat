@@ -1,0 +1,25 @@
+$white: #edecec;
+$white-two: #fefefe;
+$white-three: #fbfbfb;
+
+.header {
+    height: 101px;
+    padding-top: 40px;
+    box-shadow: 0px 1px 0 0 #ebebeb;
+    background-image: linear-gradient(to top, $white-three, $white-two);
+    margin-bottom: 50px;
+}
+
+.body {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    color: #656363;
+    text-transform: uppercase;
+    margin-right: 81px;
+}

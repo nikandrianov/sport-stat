@@ -1,0 +1,30 @@
+.footer {
+    height: 50px;
+    margin: 30px 0 0 0;
+    padding: 15px 0;
+    box-shadow: 0px -1px 0 0 #f2f1f1;
+    background-image: linear-gradient(to top, #f8f8f8, #fdfcfc);
+}
+
+.body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.copyright {
+    font-size: 13px;
+    line-height: 1.54;
+    letter-spacing: 0.39px;
+    color: #a6a6a6;
+}
+
+.social {
+    display: flex;
+    img {
+        width: 19px;
+        height: 19px;
+        margin: 0 5px;
+    }
+}
