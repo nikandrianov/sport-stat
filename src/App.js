@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import England from './pages/England';
 
 function App() {
     return (
@@ -10,7 +11,9 @@ function App() {
             <div className="App">
                 <div className="wrapper">
                     <Header />
-                    dsfsfsdfsdfsdfsd
+                    <Switch>
+                        <Route exact path="/" component={England} />
+                    </Switch>
                     <Footer />
                 </div>
             </div>
