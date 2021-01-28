@@ -1,4 +1,4 @@
-import { SET_TEAMS } from '../actions/types';
+import { SET_ENG } from '../actions/types';
 
 const initialState = {
     items: [],
@@ -6,7 +6,7 @@ const initialState = {
 
 const getTeams = (state = initialState, action) => {
     switch (action.type) {
-        case SET_TEAMS:
+        case SET_ENG:
             return { ...state, items: action.payload };
         default:
             return state;
