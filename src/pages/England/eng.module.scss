@@ -1,14 +1,42 @@
-.teams {
+.column {
+    display: flex;
+    justify-content: space-between;
     min-height: calc(100vh - 50px);
+}
+
+.teams,
+.calendar {
     width: 40%;
 }
 
 .top {
     display: flex;
     align-items: center;
-    font-size: 32px;
+    font-size: 24px;
+    justify-content: space-between;
+}
+
+.top_team {
+    display: flex;
+}
+
+.season {
+    font-size: 14px;
+    font-weight: 700;
 }
 
 .number {
     margin-right: 10px;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    justify-content: space-between;
+}
+
+.matchday {
+    font-size: 20px;
+    font-weight: 700;
 }

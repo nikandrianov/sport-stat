@@ -1,4 +1,4 @@
-import { SET_ENG } from './types';
+import { SET_ENG, SET_CALENDAR } from './types';
 import axios from 'axios';
 
 const instance = axios.create({
@@ -8,11 +8,21 @@ const instance = axios.create({
 
 export const fetchEng = () => (dispatch) => {
     instance.get('competitions/PL/teams').then(({ data }) => {
-        dispatch(setEng(data.teams));
+        dispatch(setEng(data));
+        console.log(data);
+    });
+    instance.get('competitions/PL/matches?status=SCHEDULED&matchday=22').then(({ data }) => {
+        dispatch(setCalendar(data));
+        console.log(data);
     });
 };
 
 export const setEng = (items) => ({
     type: SET_ENG,
+    payload: items,
+});
+
+export const setCalendar = (items) => ({
+    type: SET_CALENDAR,
     payload: items,
 });

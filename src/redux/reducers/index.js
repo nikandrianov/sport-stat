@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import teams from './teams';
+import england from './england';
 
 const allReducers = combineReducers({
-    teams,
+    england,
 });
 
 export default allReducers;
