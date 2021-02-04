@@ -1,0 +1,47 @@
+.column {
+    flex: 0 0 16%;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.item {
+    position: relative;
+    border: 1px solid #ddd;
+    border-bottom: 3px solid #536591;
+    height: 240px;
+    max-width: 300px;
+}
+
+.img {
+    padding: 15px;
+    margin-bottom: 5px;
+    img {
+        width: 100%;
+        display: block;
+        max-height: 150px;
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(250, 250, 250, 0.9);
+}
+
+.title {
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #808488;
+    line-height: 1.8;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 11px;
+    color: #808488;
+}

@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-import England from './pages/England';
+import ListLeague from './pages/ListLeague';
+import ListTeam from './pages/ListTeam';
 
 function App() {
     return (
@@ -12,7 +13,8 @@ function App() {
                 <div className="wrapper">
                     <Header />
                     <Switch>
-                        <Route exact path="/" component={England} />
+                        <Route exact path="/" component={ListLeague} />
+                        <Route exact path="/teams" component={ListTeam} />
                     </Switch>
                     <Footer />
                 </div>

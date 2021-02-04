@@ -34,12 +34,7 @@ const England = () => {
                         teams.map((obj, index) => <Teams key={obj.id} {...obj} index={index} />)}
                 </div>
                 <div className={style.calendar}>
-                    <div className={style.bottom}>
-                        Календарь {league && league.name}
-                        <div className={style.matchday}>
-                            Тур: {calendar && calendar[0].matchday}
-                        </div>
-                    </div>
+                    <div className={style.bottom}>Календарь {league && league.name}</div>
                     {calendar && calendar.map((obj) => <CalendarLeague key={obj.id} {...obj} />)}
                 </div>
             </div>

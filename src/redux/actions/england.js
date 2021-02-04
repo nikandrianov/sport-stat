@@ -9,11 +9,9 @@ const instance = axios.create({
 export const fetchEng = () => (dispatch) => {
     instance.get('competitions/PL/teams').then(({ data }) => {
         dispatch(setEng(data));
-        console.log(data);
     });
-    instance.get('competitions/PL/matches?status=SCHEDULED&matchday=22').then(({ data }) => {
+    instance.get('competitions/PL/matches?status=SCHEDULED').then(({ data }) => {
         dispatch(setCalendar(data));
-        console.log(data);
     });
 };
 

@@ -8,27 +8,22 @@ const Nav = () => {
             <ul className={style.items}>
                 <li>
                     <Link to="/" className={`${style.link} ${style.active}`}>
-                        Англия
+                        Список лиг
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/teams" className={style.link}>
+                        Список команд
                     </Link>
                 </li>
                 <li>
                     <Link to="#" className={style.link}>
-                        Германия
+                        Календарь лиги
                     </Link>
                 </li>
                 <li>
                     <Link to="#" className={style.link}>
-                        Испания
-                    </Link>
-                </li>
-                <li>
-                    <Link to="#" className={style.link}>
-                        Франция
-                    </Link>
-                </li>
-                <li>
-                    <Link to="#" className={style.link}>
-                        Португалия
+                        Календарь одной команды
                     </Link>
                 </li>
             </ul>
