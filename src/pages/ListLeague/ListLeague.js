@@ -15,9 +15,11 @@ const ListLeague = () => {
     });
 
     return (
-        <section className="container">
-            <div className={style.league}>
-                {leagues && leagues.map((obj) => <League key={obj.id} {...obj} />)}
+        <section className={style.listleague}>
+            <div className="container">
+                <div className={style.league}>
+                    {leagues && leagues.map((obj) => <League key={obj.id} {...obj} />)}
+                </div>
             </div>
         </section>
     );

@@ -1,19 +1,5 @@
-.listteam {
+.calendar {
     min-height: calc(100vh - 50px);
-}
-
-.team {
-    max-width: 992px;
-    margin: 0 auto;
-    font-size: 24px;
-}
-
-.top_team {
-    display: flex;
-}
-
-.number {
-    margin-right: 10px;
 }
 
 .league {
@@ -42,4 +28,11 @@
 .active {
     color: #3a3a3a;
     font-weight: 700;
+}
+
+.matchday {
+    font-weight: 700;
+    p {
+        font-weight: 400;
+    }
 }

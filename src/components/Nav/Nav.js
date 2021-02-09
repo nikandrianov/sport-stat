@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import style from './nav.module.scss';
 
 const Nav = () => {
@@ -7,25 +7,37 @@ const Nav = () => {
         <nav className={style.menu}>
             <ul className={style.items}>
                 <li>
-                    <Link to="/" className={`${style.link} ${style.active}`}>
+                    <NavLink
+                        to="/"
+                        className={`${style.link}`}
+                        activeClassName={style.active}
+                        exact>
                         Список лиг
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to="/teams" className={style.link}>
+                    <NavLink
+                        to="/teams"
+                        className={style.link}
+                        activeClassName={style.active}
+                        exact>
                         Список команд
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to="#" className={style.link}>
+                    <NavLink
+                        to="calendarleague"
+                        className={style.link}
+                        activeClassName={style.active}
+                        exact>
                         Календарь лиги
-                    </Link>
+                    </NavLink>
                 </li>
-                <li>
-                    <Link to="#" className={style.link}>
+                {/* <li>
+                    <NavLink to="#" className={style.link} activeClassName={style.active} exact>
                         Календарь одной команды
-                    </Link>
-                </li>
+                    </NavLink>
+                </li> */}
             </ul>
         </nav>
     );

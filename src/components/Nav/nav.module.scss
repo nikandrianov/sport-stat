@@ -1,28 +1,28 @@
 .menu {
-  flex: 1 1 auto;
+    flex: 1 1 auto;
 }
 
 .items {
-  display: flex;
-  text-align: center;
-  li {
-    margin-right: 30px;
-  }
-  li:last-child {
-    margin-right: 0;
-  }
+    display: flex;
+    text-align: center;
+    li {
+        margin-right: 30px;
+    }
+    li:last-child {
+        margin-right: 0;
+    }
 }
 
 .link {
-  font-size: 16px;
-  letter-spacing: 0.48px;
-  color: #7f7f7f;
-  &:hover {
-    color: #3a3a3a;
-  }
+    font-size: 16px;
+    letter-spacing: 0.48px;
+    color: #7f7f7f;
+    &:hover {
+        color: #3a3a3a;
+    }
 }
 
 .active {
-  color: #3a3a3a;
-  font-weight: 700;
+    color: #3a3a3a;
+    font-weight: 700;
 }

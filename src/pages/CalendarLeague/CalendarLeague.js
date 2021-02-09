@@ -1,19 +1,19 @@
 import React from 'react';
-import style from './listteam.module.scss';
+import style from './cal-league.module.scss';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchListTeam } from '../../redux/actions/listteam';
+import { fetchCalendarLeague } from '../../redux/actions/calendar.league';
 import { setCategoryLeague } from '../../redux/actions/team-filters';
 
-import Teams from '../../components/Teams';
+import Calendar from '../../components/CalendarLeague';
 
-const ListTeam = () => {
+const CalendarLeague = () => {
     const dispatch = useDispatch();
     const leagues = useSelector(({ leagues }) => leagues.items.competitions);
-    const teams = useSelector(({ teams }) => teams.items.teams);
+    const calendar = useSelector(({ calendarLeague }) => calendarLeague.items.matches);
     const category = useSelector(({ filters }) => filters.category);
 
     React.useEffect(() => {
-        dispatch(fetchListTeam(category));
+        dispatch(fetchCalendarLeague(category));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [category]);
 
@@ -22,7 +22,7 @@ const ListTeam = () => {
     };
 
     return (
-        <section className={style.listteam}>
+        <section className={style.calendar}>
             <div className="container">
                 <div className={style.league}>
                     <ul>
@@ -37,17 +37,16 @@ const ListTeam = () => {
                             ))}
                     </ul>
                 </div>
-                <div className={style.team}>
-                    <div className={style.top_team}>
-                        <div className={style.number}>№</div>
-                        <div className={style.title}>Команда</div>
-                    </div>
-                    {teams &&
-                        teams.map((obj, index) => <Teams key={obj.id} {...obj} index={index} />)}
-                </div>
+                {calendar &&
+                    calendar.map((obj) => (
+                        <div className={style.matchday}>
+                            Дата и время: <p>{obj.utcDate}</p>
+                            <Calendar key={obj.id} {...obj} />
+                        </div>
+                    ))}
             </div>
         </section>
     );
 };
 
-export default ListTeam;
+export default CalendarLeague;

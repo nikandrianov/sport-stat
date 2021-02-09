@@ -1,5 +1,8 @@
 .league {
-    min-height: calc(100vh - 50px);
     display: flex;
     flex-wrap: wrap;
+}
+
+.listleague {
+    min-height: calc(100vh - 50px);
 }

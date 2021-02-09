@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './teams.module.scss';
 
+const noImg = 'https://neuronsk.ru/upload/medialibrary/771/771dad7444a2937b6085360951e048b1.png';
+
 const Teams = ({ index, name, crestUrl }) => {
     return (
         <div className={style.column}>
@@ -10,7 +12,7 @@ const Teams = ({ index, name, crestUrl }) => {
                 <div className={style.team}>
                     <div className={style.name}>{name}</div>
                     <div className={style.img}>
-                        <img src={crestUrl} alt="" />
+                        <img src={crestUrl === null ? noImg : crestUrl} alt="" />
                     </div>
                 </div>
             </div>

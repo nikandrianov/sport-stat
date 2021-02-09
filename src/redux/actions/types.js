@@ -1,3 +1,4 @@
-export const SET_ENG = 'SET_ENG';
-export const SET_CALENDAR = 'SET_CALENDAR';
 export const SET_LIST_LEAGUE = 'SET_LIST_LEAGUE';
+export const SET_LIST_TEAM = 'SET_LIST_TEAM';
+export const SET_CALENDAR_LEAGUE = 'SET_CALENDAR_LEAGUE';
+export const SET_CATEGORY_LEAGUE = 'SET_CATEGORY_LEAGUE';
