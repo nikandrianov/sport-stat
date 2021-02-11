@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './calendar.module.scss';
 
-const CalendarLeague = ({ homeTeam, score, awayTeam }) => {
+const CalendarLeague = ({ homeTeam, score, awayTeam, utcDate, matchday }) => {
     return (
         <div className={style.column}>
             <div className={style.content}>
+                <div className={style.date}>{utcDate}</div>
                 <div className={style.team}>
                     <div className={style.name}>{homeTeam.name}</div>
                     <div className={style.score}>
@@ -15,6 +16,7 @@ const CalendarLeague = ({ homeTeam, score, awayTeam }) => {
                     </div>
                     <div className={style.name_away}>{awayTeam.name}</div>
                 </div>
+                <div className={style.matchday}>Тур: {matchday}</div>
             </div>
         </div>
     );

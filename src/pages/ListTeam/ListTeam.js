@@ -24,27 +24,39 @@ const ListTeam = () => {
     return (
         <section className={style.listteam}>
             <div className="container">
-                <div className={style.league}>
-                    <ul>
-                        {leagues &&
-                            leagues.map((elem) => (
-                                <li
-                                    key={elem.id}
-                                    onClick={() => onSelectCategory(elem.code)}
-                                    className={category === elem.code ? style.active : ''}>
-                                    {elem.name}
-                                </li>
-                            ))}
-                    </ul>
-                </div>
-                <div className={style.team}>
-                    <div className={style.top_team}>
-                        <div className={style.number}>№</div>
-                        <div className={style.title}>Команда</div>
+                {teams ? (
+                    <>
+                        <div className={style.league}>
+                            <ul>
+                                {leagues &&
+                                    leagues.map((elem) => (
+                                        <li
+                                            key={elem.id}
+                                            onClick={() => onSelectCategory(elem.code)}
+                                            className={category === elem.code ? style.active : ''}>
+                                            {elem.name}
+                                        </li>
+                                    ))}
+                            </ul>
+                        </div>
+                        <div className={style.team}>
+                            <div className={style.top_team}>
+                                <div className={style.number}>№</div>
+                                <div className={style.title}>Команда</div>
+                            </div>
+                            {teams &&
+                                teams.map((obj, index) => (
+                                    <Teams key={obj.id} {...obj} index={index} />
+                                ))}
+                        </div>
+                    </>
+                ) : (
+                    <div>
+                        Произошла ошибка с сервером API, пожалуйста перезагрузите страницу через 1
+                        минуту, если страница останется пустой, то следует повторить действия по
+                        перезагрузке страницы (такова особенность сервера API)
                     </div>
-                    {teams &&
-                        teams.map((obj, index) => <Teams key={obj.id} {...obj} index={index} />)}
-                </div>
+                )}
             </div>
         </section>
     );

@@ -1,6 +1,7 @@
 .content {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     border-top: 1px solid #f6f6f6;
     padding-top: 15px;
@@ -11,11 +12,11 @@
 .team {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 60%;
 }
 
 .name {
-    width: 48%;
+    width: 45%;
     text-align: right;
 }
 

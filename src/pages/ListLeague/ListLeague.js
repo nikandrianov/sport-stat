@@ -17,9 +17,17 @@ const ListLeague = () => {
     return (
         <section className={style.listleague}>
             <div className="container">
-                <div className={style.league}>
-                    {leagues && leagues.map((obj) => <League key={obj.id} {...obj} />)}
-                </div>
+                {leagues ? (
+                    <div className={style.league}>
+                        {leagues && leagues.map((obj) => <League key={obj.id} {...obj} />)}
+                    </div>
+                ) : (
+                    <div>
+                        Произошла ошибка с сервером API, пожалуйста перезагрузите страницу через 1
+                        минуту, если страница останется пустой, то следует повторить действия по
+                        перезагрузке страницы (такова особенность сервера API)
+                    </div>
+                )}
             </div>
         </section>
     );
