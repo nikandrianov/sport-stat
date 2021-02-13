@@ -10,7 +10,6 @@
     border-bottom: 3px solid #536591;
     height: 240px;
     max-width: 300px;
-    cursor: pointer;
 }
 
 .img {
@@ -44,4 +43,77 @@
     text-align: center;
     font-size: 11px;
     color: #808488;
+}
+
+@media (max-width: 960px) {
+    .column {
+        flex: 0 0 25%;
+        padding: 0 10px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 720px) {
+    .column {
+        margin: 0 auto;
+        flex: 0 0 30%;
+        padding: 0 10px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+    .item {
+        height: 200px;
+    }
+    .img {
+        img {
+            max-height: 100px;
+        }
+    }
+    .title {
+        font-size: 11px;
+    }
+
+    .subtitle {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 540px) {
+    .column {
+        margin: 0 auto;
+        flex: 0 0 50%;
+        padding: 0 5px;
+        margin-bottom: 10px;
+    }
+    .item {
+        height: 240px;
+    }
+    .img {
+        img {
+            max-height: 140px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        height: 200px;
+    }
+    .img {
+        img {
+            max-height: 100px;
+        }
+    }
+    .title {
+        font-size: 11px;
+    }
+
+    .subtitle {
+        font-size: 9px;
+    }
 }

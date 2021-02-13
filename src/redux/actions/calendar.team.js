@@ -1,4 +1,4 @@
-import { SET_CALENDAR_LEAGUE } from './types';
+import { SET_CALENDAR_TEAM } from './types';
 import axios from 'axios';
 
 const instance = axios.create({
@@ -6,21 +6,21 @@ const instance = axios.create({
     headers: { 'X-Auth-Token': '79b4fa5a64df40cdb600d686c41d22fb' },
 });
 
-export const fetchCalendarLeague = (category, dateFrom, dateTo) => (dispatch) => {
+export const fetchCalendarTeam = (team, dateFrom, dateTo) => (dispatch) => {
     instance
         .get(
-            `competitions/${category !== null ? `${category}` : ''}/matches?${
+            `teams/${team !== null ? `${team}` : ''}/matches?${
                 dateFrom && dateTo !== null
                     ? `dateFrom=${dateFrom}&dateTo=${dateTo}`
                     : `status=SCHEDULED`
             }`,
         )
         .then(({ data }) => {
-            dispatch(setCalendarLeague(data));
+            dispatch(setCalendarTeam(data));
         });
 };
 
-export const setCalendarLeague = (items) => ({
-    type: SET_CALENDAR_LEAGUE,
+export const setCalendarTeam = (items) => ({
+    type: SET_CALENDAR_TEAM,
     payload: items,
 });

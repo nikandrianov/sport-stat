@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import ListLeague from './pages/ListLeague';
 import ListTeam from './pages/ListTeam';
 import CalendarLeague from './pages/CalendarLeague';
+import CalendarTeam from './pages/CalendarTeam';
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                             <Route exact path="/" component={ListLeague} />
                             <Route exact path="/teams" component={ListTeam} />
                             <Route exact path="/calendarleague" component={CalendarLeague} />
+                            <Route exact path="/calendarteam" component={CalendarTeam} />
                         </Switch>
                     </div>
                     <Footer />

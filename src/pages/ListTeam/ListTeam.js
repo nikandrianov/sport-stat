@@ -2,6 +2,7 @@ import React from 'react';
 import style from './listteam.module.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchListTeam } from '../../redux/actions/listteam';
+import { fetchListLeague } from '../../redux/actions/listleague';
 import { setCategoryLeague } from '../../redux/actions/team-filters';
 
 import Teams from '../../components/Teams';
@@ -13,6 +14,7 @@ const ListTeam = () => {
     const category = useSelector(({ filters }) => filters.category);
 
     React.useEffect(() => {
+        dispatch(fetchListLeague());
         dispatch(fetchListTeam(category));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [category]);

@@ -26,18 +26,22 @@ const Nav = () => {
                 </li>
                 <li>
                     <NavLink
-                        to="calendarleague"
+                        to="/calendarleague"
                         className={style.link}
                         activeClassName={style.active}
                         exact>
                         Календарь лиги
                     </NavLink>
                 </li>
-                {/* <li>
-                    <NavLink to="#" className={style.link} activeClassName={style.active} exact>
-                        Календарь одной команды
+                <li>
+                    <NavLink
+                        to="/calendarteam"
+                        className={style.link}
+                        activeClassName={style.active}
+                        exact>
+                        Календарь команды
                     </NavLink>
-                </li> */}
+                </li>
             </ul>
         </nav>
     );

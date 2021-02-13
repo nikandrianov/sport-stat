@@ -1,30 +1,39 @@
 import React from 'react';
-import style from './cal-league.module.scss';
+import style from './cal-team.module.scss';
 import moment from 'moment';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchCalendarLeague } from '../../redux/actions/calendar.league';
+import { fetchCalendarTeam } from '../../redux/actions/calendar.team';
 import { fetchListLeague } from '../../redux/actions/listleague';
+import { fetchListTeam } from '../../redux/actions/listteam';
 import { setCategoryLeague } from '../../redux/actions/team-filters';
+import { setCategoryTeam } from '../../redux/actions/filters.team';
 import { setDateFrom, setDateTo } from '../../redux/actions/date.league';
 
-import Calendar from '../../components/CalendarLeague';
 import DateForm from '../../components/DateForm';
+import TeamInfo from '../../components/TeamInfo/TeamInfo';
 
 const CalendarLeague = () => {
     const dispatch = useDispatch();
     const leagues = useSelector(({ leagues }) => leagues.items.competitions);
-    const calendar = useSelector(({ calendarLeague }) => calendarLeague.items.matches);
+    const calendar = useSelector(({ calendarTeam }) => calendarTeam.items.matches);
+    const teams = useSelector(({ teams }) => teams.items.teams);
     const category = useSelector(({ filters }) => filters.category);
+    const team = useSelector(({ filterTeam }) => filterTeam.team);
     const { dateFrom, dateTo } = useSelector(({ dateLeague }) => dateLeague);
 
     React.useEffect(() => {
         dispatch(fetchListLeague());
-        dispatch(fetchCalendarLeague(category, dateFrom, dateTo));
+        dispatch(fetchListTeam(category));
+        dispatch(fetchCalendarTeam(team, dateFrom, dateTo));
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [category, dateFrom, dateTo]);
+    }, [category, team, dateFrom, dateTo]);
 
     const onSelectCategory = (league) => {
         dispatch(setCategoryLeague(league));
+    };
+
+    const onSelectTeam = (team) => {
+        dispatch(setCategoryTeam(team));
     };
 
     const onSelectDateLeague = (dateFrom, dateTo) => {
@@ -54,7 +63,7 @@ const CalendarLeague = () => {
     return (
         <section className={style.calendar}>
             <div className="container">
-                {calendar ? (
+                {teams ? (
                     <>
                         <div className={style.league}>
                             <ul>
@@ -69,6 +78,19 @@ const CalendarLeague = () => {
                                     ))}
                             </ul>
                         </div>
+                        <div className={style.team}>
+                            <ul>
+                                {teams &&
+                                    teams.map((elem) => (
+                                        <li
+                                            key={elem.id}
+                                            onClick={() => onSelectTeam(elem.id)}
+                                            className={team === elem.id ? style.active : ''}>
+                                            {elem.name}
+                                        </li>
+                                    ))}
+                            </ul>
+                        </div>
                         <DateForm
                             startDate={startDate}
                             endDate={endDate}
@@ -77,7 +99,7 @@ const CalendarLeague = () => {
                             handleDateStartChange={handleDateStartChange}
                             handleDateEndChange={handleDateEndChange}
                         />
-                        {calendar && calendar.map((obj) => <Calendar key={obj.id} {...obj} />)}
+                        {calendar && calendar.map((obj) => <TeamInfo key={obj.id} {...obj} />)}
                     </>
                 ) : (
                     <div>

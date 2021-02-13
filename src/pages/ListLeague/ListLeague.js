@@ -8,7 +8,6 @@ import League from '../../components/League/';
 const ListLeague = () => {
     const dispatch = useDispatch();
     const leagues = useSelector(({ leagues }) => leagues.items.competitions);
-    console.log(leagues);
 
     React.useEffect(() => {
         dispatch(fetchListLeague());

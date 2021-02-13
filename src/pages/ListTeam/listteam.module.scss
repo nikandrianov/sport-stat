@@ -43,3 +43,18 @@
     color: #3a3a3a;
     font-weight: 700;
 }
+
+.league {
+    ul {
+        flex-wrap: wrap;
+    }
+    li {
+        padding: 5px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .team {
+        font-size: 16px;
+    }
+}

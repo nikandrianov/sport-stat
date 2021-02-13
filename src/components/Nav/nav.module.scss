@@ -26,3 +26,14 @@
     color: #3a3a3a;
     font-weight: 700;
 }
+
+@media (max-width: 576px) {
+    .items {
+        li {
+            margin-right: 10px;
+        }
+    }
+    .link {
+        font-size: 14px;
+    }
+}
