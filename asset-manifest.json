@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/sport-stat/static/css/main.da5986e5.chunk.css",
-    "main.js": "/sport-stat/static/js/main.944c20aa.chunk.js",
-    "main.js.map": "/sport-stat/static/js/main.944c20aa.chunk.js.map",
+    "main.css": "/sport-stat/static/css/main.d89601ce.chunk.css",
+    "main.js": "/sport-stat/static/js/main.aacf5a74.chunk.js",
+    "main.js.map": "/sport-stat/static/js/main.aacf5a74.chunk.js.map",
     "runtime-main.js": "/sport-stat/static/js/runtime-main.2dd89b89.js",
     "runtime-main.js.map": "/sport-stat/static/js/runtime-main.2dd89b89.js.map",
-    "static/js/2.923e0ab6.chunk.js": "/sport-stat/static/js/2.923e0ab6.chunk.js",
-    "static/js/2.923e0ab6.chunk.js.map": "/sport-stat/static/js/2.923e0ab6.chunk.js.map",
+    "static/js/2.60c16d26.chunk.js": "/sport-stat/static/js/2.60c16d26.chunk.js",
+    "static/js/2.60c16d26.chunk.js.map": "/sport-stat/static/js/2.60c16d26.chunk.js.map",
     "index.html": "/sport-stat/index.html",
-    "static/css/main.da5986e5.chunk.css.map": "/sport-stat/static/css/main.da5986e5.chunk.css.map",
-    "static/js/2.923e0ab6.chunk.js.LICENSE.txt": "/sport-stat/static/js/2.923e0ab6.chunk.js.LICENSE.txt",
+    "static/css/main.d89601ce.chunk.css.map": "/sport-stat/static/css/main.d89601ce.chunk.css.map",
+    "static/js/2.60c16d26.chunk.js.LICENSE.txt": "/sport-stat/static/js/2.60c16d26.chunk.js.LICENSE.txt",
     "static/media/facebook.183696ad.svg": "/sport-stat/static/media/facebook.183696ad.svg",
     "static/media/google.2d4a07e3.svg": "/sport-stat/static/media/google.2d4a07e3.svg",
     "static/media/instagram.b26ca850.svg": "/sport-stat/static/media/instagram.b26ca850.svg",
@@ -17,8 +17,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2dd89b89.js",
-    "static/js/2.923e0ab6.chunk.js",
-    "static/css/main.da5986e5.chunk.css",
-    "static/js/main.944c20aa.chunk.js"
+    "static/js/2.60c16d26.chunk.js",
+    "static/css/main.d89601ce.chunk.css",
+    "static/js/main.aacf5a74.chunk.js"
   ]
 }
