@@ -1,0 +1,42 @@
+.calendar {
+    min-height: calc(100vh - 50px);
+}
+
+.league,
+.team {
+    margin-bottom: 30px;
+    ul {
+        display: flex;
+        font-size: 12px;
+        letter-spacing: 0.48px;
+        color: #7f7f7f;
+    }
+    li {
+        &:hover {
+            color: #3a3a3a;
+            cursor: pointer;
+        }
+    }
+    li:last-child {
+        margin-right: 0;
+    }
+    li::after {
+        content: '|';
+        padding: 5px;
+    }
+}
+
+.active {
+    color: #3a3a3a;
+    font-weight: 700;
+}
+
+.team,
+.league {
+    ul {
+        flex-wrap: wrap;
+    }
+    li {
+        padding: 5px 0;
+    }
+}

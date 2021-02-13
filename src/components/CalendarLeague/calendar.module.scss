@@ -1,0 +1,41 @@
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-top: 1px solid #f6f6f6;
+    padding-top: 15px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+
+.name {
+    width: 45%;
+    text-align: right;
+}
+
+.score {
+    padding: 0 10px;
+}
+
+@media (max-width: 720px) {
+    .content {
+        font-size: 11px;
+    }
+}
+@media (max-width: 480px) {
+    .content {
+        font-size: 10px;
+    }
+    .team {
+        display: flex;
+        align-items: center;
+        width: 50%;
+    }
+}

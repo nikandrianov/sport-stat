@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import style from './nav.module.scss';
 
 const Nav = () => {
@@ -7,29 +7,40 @@ const Nav = () => {
         <nav className={style.menu}>
             <ul className={style.items}>
                 <li>
-                    <Link to="/" className={`${style.link} ${style.active}`}>
-                        Англия
-                    </Link>
+                    <NavLink
+                        to="/"
+                        className={`${style.link}`}
+                        activeClassName={style.active}
+                        exact>
+                        Список лиг
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to="#" className={style.link}>
-                        Германия
-                    </Link>
+                    <NavLink
+                        to="/teams"
+                        className={style.link}
+                        activeClassName={style.active}
+                        exact>
+                        Список команд
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to="#" className={style.link}>
-                        Испания
-                    </Link>
+                    <NavLink
+                        to="/calendarleague"
+                        className={style.link}
+                        activeClassName={style.active}
+                        exact>
+                        Календарь лиги
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to="#" className={style.link}>
-                        Франция
-                    </Link>
-                </li>
-                <li>
-                    <Link to="#" className={style.link}>
-                        Португалия
-                    </Link>
+                    <NavLink
+                        to="/calendarteam"
+                        className={style.link}
+                        activeClassName={style.active}
+                        exact>
+                        Календарь команды
+                    </NavLink>
                 </li>
             </ul>
         </nav>

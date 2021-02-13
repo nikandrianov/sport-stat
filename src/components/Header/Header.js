@@ -9,7 +9,7 @@ const Header = () => {
             <div className="container">
                 <div className={style.body}>
                     <Link to="/" className={style.logo}>
-                        Sport Stat
+                        SoccerStat
                     </Link>
                     <Nav />
                 </div>

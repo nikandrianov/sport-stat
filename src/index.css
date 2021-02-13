@@ -83,5 +83,41 @@ h6 {
 
 .container {
     margin: 0 auto;
-    max-width: 980px;
+    max-width: 1170px;
+}
+
+@media (max-width: 1170px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 960px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 720px) {
+    .container {
+        max-width: 576px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (max-width: 540px) {
+    .container {
+        max-width: 480px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 300px;
+    }
 }
